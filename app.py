@@ -20,7 +20,7 @@ if st.button("Procesar Video"):
         # st.spinner muestra una "ruedita de carga" mientras el código trabaja
         with st.spinner('Conectando con YouTube y fusionando HD... (esto puede tardar unos minutos)'):
             try:
-                yt = YouTube(url)
+                yt = YouTube(url, client='TV')
                 titulo_limpio = re.sub(r'[\\/*?:"<>|]', "", yt.title)
                 
                 # Descargamos pistas
